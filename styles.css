@@ -89,13 +89,13 @@ p {
 }
 
 .response-yes {
-    background-color: rgba(232, 245, 233, 0.8);
-    color: #1b5e20;
+    background-color: #E8F5E9;
+    color: #1B5E20;
 }
 
 .response-no {
-    background-color: rgba(227, 242, 253, 0.8);
-    color: #0d47a1;
+    background-color: #FFEBEE;
+    color: #B71C1C;
 }
 
 .hidden {
