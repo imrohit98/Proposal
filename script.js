@@ -8,11 +8,15 @@ function respond(answer) {
     if (answer) {
         const confettiContainer = document.getElementById('confetti-container');
         for (let i = 0; i < 100; i++) {
-            const confetti = document.createElement('div');
-            confetti.classList.add('confetti');
-            confetti.style.left = Math.random() * 100 + '%';
-            confetti.style.animationDelay = Math.random() * 2 + 's';
-            confettiContainer.appendChild(confetti);
+            const element = document.createElement('div');
+            if (Math.random() > 0.5) {
+                element.classList.add('heart-fall');
+            } else {
+                element.classList.add('rose-fall');
+            }
+            element.style.left = Math.random() * 100 + '%';
+            element.style.animationDelay = Math.random() * 2 + 's';
+            confettiContainer.appendChild(element);
         }
         response.innerHTML = `
             <div class="response response-yes">
@@ -69,7 +73,7 @@ function cleanUpConfetti() {
 }
 
 document.addEventListener('animationend', function(e) {
-    if (e.target.classList.contains('confetti')) {
+    if (e.target.classList.contains('confetti') || e.target.classList.contains('heart-fall') || e.target.classList.contains('rose-fall')) {
         e.target.remove();
     }
 });

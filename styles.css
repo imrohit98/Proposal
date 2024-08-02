@@ -31,7 +31,7 @@ body, html {
     color: #ff4136;
     font-size: 3rem;
     margin-bottom: 1rem;
-    animation: pulse 1s infinite alternate;
+    animation: pulse 0.5s infinite alternate;
 }
 
 @keyframes pulse {
@@ -116,15 +116,24 @@ p {
     z-index: 1000;
 }
 
-.confetti {
+.confetti, .heart-fall, .rose-fall {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #f0f0f0;
-    animation: confetti-fall 3s linear infinite;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fall 2.5s linear infinite;
 }
 
-@keyframes confetti-fall {
+.heart-fall {
+    background-image: url('heart.png'); /* Replace with heart image URL */
+}
+
+.rose-fall {
+    background-image: url('rose.png'); /* Replace with rose image URL */
+}
+
+@keyframes fall {
     0% {
         transform: translateY(-100%) rotate(0deg);
     }
@@ -132,10 +141,6 @@ p {
         transform: translateY(100vh) rotate(360deg);
     }
 }
-
-.confetti:nth-child(3n) { background-color: #ff9999; }
-.confetti:nth-child(3n + 1) { background-color: #99ff99; }
-.confetti:nth-child(3n + 2) { background-color: #9999ff; }
 
 @media (max-width: 600px) {
     .card {
