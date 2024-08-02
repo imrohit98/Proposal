@@ -1,5 +1,5 @@
 function respond(answer) {
-    sendResponse(answer);
+     sendResponse(answer);
     const buttons = document.getElementById('buttons');
     const response = document.getElementById('response');
     buttons.style.display = 'none';

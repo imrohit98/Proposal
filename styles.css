@@ -4,18 +4,17 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: "Dancing Script", cursive;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden;
 }
 
 .container {
-    height: 100vh; /* Changed from min-height to height */
-    /* background: linear-gradient(to right, #ffd1dc, #e0c3fc, #8ec5fc); */
-    background-image: url('background.jpg'); /* Replace with background image URL */
+    height: 100vh;
+    background-image: url('background.jpg');
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    box-sizing: border-box;
 }
 
 .card {
@@ -25,9 +24,9 @@ body, html {
     padding: 2.5rem;
     text-align: center;
     max-width: 400px;
-    width: 90%; /* Changed from 100% to 90% */
-    max-height: 90vh; /* Limit the maximum height */
-    overflow-y: auto; /* Add scrolling if content exceeds max-height */
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
 }
@@ -131,11 +130,11 @@ p {
 }
 
 .heart-fall {
-    background-image: url('heart.png'); /* Replace with heart image URL */
+    background-image: url('heart.png');
 }
 
 .rose-fall {
-    background-image: url('rose.png'); /* Replace with rose image URL */
+    background-image: url('rose.png');
 }
 
 @keyframes fall {
@@ -148,9 +147,15 @@ p {
 }
 
 @media (max-width: 600px) {
+    .container {
+        align-items: center; /* Ensure vertical centering */
+    }
+
     .card {
         padding: 1.5rem;
-        width: 85%; /* Further reduced width for smaller screens */
+        width: 85%;
+        margin: 0 auto; /* Center the card horizontally */
+        transform: translateY(0); /* Reset any vertical translation */
     }
 
     h1 {
