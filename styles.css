@@ -3,13 +3,13 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: "Dancing Script", cursive;
+    font-family: 'Poppins', sans-serif;
     overflow: hidden;
 }
 
 .container {
     height: 100vh;
-    background-image: url('background.jpg');
+    background: linear-gradient(to right, #ffd1dc, #e0c3fc, #8ec5fc);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +18,7 @@ body, html {
 }
 
 .card {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     padding: 2.5rem;
